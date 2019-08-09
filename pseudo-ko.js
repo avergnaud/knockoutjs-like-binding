@@ -3,14 +3,15 @@ const ko = (function(){
 	
 	applyBindings = model => {	
 	
-		/* quand on set la property, met à jour la value pour tous les [data-bind="property"] */
+		/* quand on set la property, met à jour la property value pour tous les [data-bind="property"] */
 		const handler = {
-			set: (object, property, value) => {
-				object[property] = value;
-				console.log('handler called for property ' + property + ', value >' + value + '<');
+			set: (object, property, newValue) => {
+				object[property] = newValue;// default behavior
+				console.log('handler called for property: >' + property + '<, value: >' + newValue + '<');
 				const selector = '[data-bind="' + property + '"]';
+				// property binding (only "value")
 				document.querySelectorAll(selector).forEach(
-					element => element.value = value
+					element => element.value = newValue
 				);
 				return true;
 			}
@@ -37,7 +38,7 @@ const ko = (function(){
 						}
 					);
 				} else {
-					// property binding (only "value")
+					// event binding (only "input")
 					const selector = '[data-bind="' + modelProperty + '"]';
 					document.querySelectorAll(selector).forEach(
 						element => {
