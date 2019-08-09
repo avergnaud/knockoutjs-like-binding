@@ -6,7 +6,7 @@ Two ways binding only for:
 - "input" events
 - "value" properties
 
-HTML :
+## HTML
 ```
 <input
 	id="input-1"
@@ -27,7 +27,7 @@ HTML :
 </button>
 ```
 
-JS
+## JavaScript
 ```
 <script src="pseudo-ko.js"></script>
 ```
