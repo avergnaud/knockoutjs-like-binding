@@ -6,6 +6,7 @@ Two ways binding only for:
 - "input" events
 - "value" properties
 
+HTML :
 ```
 <input
 	id="input-1"
@@ -25,7 +26,12 @@ Two ways binding only for:
 	Clear
 </button>
 ```
-	
+
+JS
+```
+<script src="pseudo-ko.js"></script>
+```
+and then:
 ```
 let viewModel = {
 	saisie: '',
