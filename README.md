@@ -1,6 +1,8 @@
 # knockoutjs-like-binding
 Vanilla JS Knockout-like data &amp; event binding
 
+[Démo](https://avergnaud.github.io/ko/index.html)
+
 Two ways binding only for:
 - "click" events
 - "input" events
